@@ -13,7 +13,8 @@
     "start": "node server/index.js",
     "setup": "npm install && cd client && npm install",
     "seed": "node server/seedCategories.js",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "render:build": "npm install"
   },
   "dependencies": {
     "express": "^4.18.2",
