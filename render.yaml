@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: ankit-mobile-armor-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_EMAIL
+        value: admin@glassshop.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: WHATSAPP_NUMBER
+        value: 919717982082
+      - key: BUSINESS_NAME
+        value: Ankit Mobile Armor
+      - key: BUSINESS_PHONE
+        value: +919717982082
+      - key: BUSINESS_EMAIL
+        value: srivastavaankit657@gmail.com
+
+  - type: static
+    name: ankit-mobile-armor-web
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://ankit-mobile-armor-api.onrender.com

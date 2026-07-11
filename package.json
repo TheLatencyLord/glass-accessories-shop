@@ -1,0 +1,31 @@
+{
+  "name": "glass-accessories-shop",
+  "version": "1.0.0",
+  "description": "E-commerce website for mobile glass and accessories wholesale",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "npm run server:dev",
+    "server:dev": "node --watch server/index.js",
+    "client:dev": "cd client && npm run dev",
+    "server:build": "echo 'Server is ESM, no build needed'",
+    "client:build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "setup": "npm install && cd client && npm install",
+    "seed": "node server/seedCategories.js",
+    "build": "cd client && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

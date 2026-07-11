@@ -1,0 +1,179 @@
+.admin-orders {
+  width: 100%;
+}
+
+/* ============ PAGE HEADER ============ */
+.admin-orders h1 {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* ============ TABLE ============ */
+.orders-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  padding: 18px;
+  text-align: left;
+  font-weight: 700;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.order-id {
+  font-weight: 700;
+  color: #f97316;
+  font-size: 13px;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #1f2937;
+  background-color: #f9fafb;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  background-color: white;
+}
+
+.status-select:hover {
+  border-color: #f97316;
+}
+
+.status-select option {
+  color: #1f2937;
+  background-color: white;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-orders h1 {
+    font-size: 28px;
+  }
+
+  .orders-table {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 600px;
+  }
+
+  th {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .order-id {
+    font-size: 11px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .status-select {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-orders h1 {
+    font-size: 24px;
+  }
+
+  table {
+    min-width: 500px;
+  }
+
+  th {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  td {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .order-id {
+    font-size: 10px;
+  }
+
+  .status-select {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
